@@ -1,0 +1,1 @@
+scratchclient~=0.5.2
