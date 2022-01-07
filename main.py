@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.ttk import Combobox
 
 window = Tk()
-window.title("Добро пожаловать в приложение PythonRu")
+window.title("Система массовых Репортов На Скретчера")
 window.geometry('900x300')
 lbl = Label(window, text="ПРИВЕТ! Это бот Спаммер. Он спамит жалобы в скретч тим!", font=("Arial Bold", 17))
 lbl2 = Label(window,
