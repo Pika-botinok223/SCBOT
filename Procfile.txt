@@ -1,1 +1,20 @@
-worker: python main.py
+import threading
+def f4f():
+    from scratchclient import ScratchSession
+    from random import randint
+
+    s = ScratchSession('thE_codeE', 'scratch_2009sasha')
+    while True:
+        try:
+            user = s.get_project(randint(0, 620000000)).author.username
+            s.get_user(user).follow()
+            s.get_user(user).post_comment(
+                '''I follow You, can You please follow me? Я подписался на Вас, пожалуйста подпишитесь на меня. 我跟着你，你能跟着我吗？''')
+            print('+')
+        except BaseException:
+            pass
+if __name__ == "__main__":
+    for i in range(5):
+        p = threading.Thread(target=f4f)
+        print("Запуск Ещё одного потока")
+        p.start()
